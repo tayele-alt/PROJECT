@@ -64,11 +64,14 @@ class Player(pygame.sprite.Sprite):
             self.velocity_y += self.gravity * delta
             self.rect.y += self.velocity_y * delta
 
-        #Collision with Floor
-        if self.rect.bottom >= SCREEN_HEIGHT - 50:
-            self.rect.bottom = SCREEN_HEIGHT - 50
-            self.is_jumping = False
-            self.velocity_y = 0
+        #Platform collision
+        self.is_jumping = True
+        for plat in game.platforms:
+            if self.rect.colliderect(plat.rect) and self.velocity_y >=0:
+                self.rect.bottom = plat.rect.top
+                self.velocity_y = 0
+                self.is_jumping = False
+
 
 #Platorms
 class Platfrom(pygame.sprite.Sprite):
