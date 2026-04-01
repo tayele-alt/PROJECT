@@ -41,7 +41,13 @@ class Player(pygame.sprite.Sprite):
 
     def reset(self):
         self.rect.bottomleft = (20, SCREEN_HEIGHT - 50)
+        self.its_jumping = False
+        self.velocity_y = 0
+        self.has_flag = False
 
+    def update(self, delta):
+        keys = pygame.key.get_pressed()
+    
 
 #Game
 class Game:
