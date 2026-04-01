@@ -94,7 +94,8 @@ class Game:
 
     def _draw(self):
         self.screen.fill(BLACK)
-        
+        pygame.draw.line(self.screen, GRAY, (0, SCREEN_HEIGHT -50), (SCREEN_WIDTH, SCREEN_HEIGHT - 50), 2)
+        self.all_sprites.draw(self.screen)
         pygame.display.flip()
 
     def run(self):
