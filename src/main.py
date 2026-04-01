@@ -79,6 +79,9 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = True
 
+    #Sprites
+    self.all_spries = pygame.sprite.Group()
+
     def _handle_events(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
