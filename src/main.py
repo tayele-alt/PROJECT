@@ -18,3 +18,5 @@ PLAYER_JUMP_POWER = -600
 PLAYER_GRAVITY = 1200
 GAME_DURATION = 60
 
+#Folder Path
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
