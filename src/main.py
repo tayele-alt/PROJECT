@@ -48,6 +48,27 @@ class Player(pygame.sprite.Sprite):
     def update(self, delta):
         keys = pygame.key.get_pressed()
     
+        # Movement
+        if keys[pygame.LEFT] and self.rect.left > 0:
+            self.rect.x -= self.spped * delta
+        if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
+            self.rect.x += self.speed * delta
+
+        #Jumpingg
+        if keys[pygame.K_SPACE] and not self.is_jumping:
+            self.is_jumping = True
+            self.velocity_y = self.jump_power
+
+        #Gravityy
+        if self.is_jumping:
+            self.velocity_y += self.gravity * delta
+            self.rect.y += self.velocity_y * delta
+
+        #Collision with Floor
+        if self.rect.bottom >= SCREEN_HEIGHT - 50:
+            self.rect.bottom = SCREEN_HEIGHT - 50
+            self.is_jumping = False
+            self.velocity_y = 0
 
 #Game
 class Game:
