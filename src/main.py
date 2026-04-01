@@ -50,7 +50,7 @@ class Player(pygame.sprite.Sprite):
     
         # Movement
         if keys[pygame.K_LEFT] and self.rect.left > 0:
-            self.rect.x -= self.spped * delta
+            self.rect.x -= self.speed * delta
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += self.speed * delta
 
