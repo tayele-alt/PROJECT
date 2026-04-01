@@ -41,3 +41,8 @@ class Game:
     def _draw(self):
         self.screen.fill(BLACK)
         pygame.display.flip()
+
+    def run(self):
+        while self.running:
+            self.clock.tick(MAX_FPS)
+            delta = self.clock
