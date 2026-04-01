@@ -90,7 +90,6 @@ class Game:
         self.running = True
 
         #Platforms
-        self.player.platforms = self.platforms
         self.platforms = pygame.sprite.Group()
         for (x, y, w, h) in [
             (0, 450, 800, 20)
