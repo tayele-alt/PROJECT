@@ -91,7 +91,7 @@ class Game:
 
         #Platforms
         self.platforms = pygame.sprite.Group()
-        self.all_sprites = pygame.s
+        self.all_sprites = pygame.sprite.Group()
         for (x, y, w, h) in [
             (0, 450, 800, 20)
         ]:
