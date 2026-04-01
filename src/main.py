@@ -6,4 +6,8 @@ SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 500
 MAX_FPS = 60
 
-#Constants
+#Colors
+WHITE = (225, 225, 225)
+BLACK = (0, 0, 0)
+BLUE = (50, 100, 200)
+GREEM = ()
