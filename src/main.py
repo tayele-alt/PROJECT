@@ -49,3 +49,7 @@ class Game:
             self._update(delta)
             self._draw()
         pygame.quit()
+
+if __name__ == "__main__":
+    game = Game()
+    game.run()
