@@ -80,7 +80,7 @@ class Game:
         self.running = True
 
         #Sprites
-        self.all_spries = pygame.sprite.Group()
+        self.all_sprites = pygame.sprite.Group()
         self.player = Player()
         self.all_sprites.add(self.player)
 
@@ -90,10 +90,11 @@ class Game:
                 self.running = False
 
     def _update(self, delta):
-        pass
+        self.all_sprites.update(delta)
 
     def _draw(self):
         self.screen.fill(BLACK)
+        
         pygame.display.flip()
 
     def run(self):
