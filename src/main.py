@@ -101,6 +101,7 @@ class Game:
 
     def run(self):
         while self.running:
+            self,self._handle_events()
             self.clock.tick(MAX_FPS)
             delta = self.clock.get_time() / 1000.0
             self._update(delta)
