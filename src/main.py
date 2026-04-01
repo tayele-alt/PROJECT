@@ -79,8 +79,10 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = True
 
-    #Sprites
-    self.all_spries = pygame.sprite.Group()
+        #Sprites
+        self.all_spries = pygame.sprite.Group()
+        self.player = Player()
+        self.all_sprites.add(self.player)
 
     def _handle_events(self):
         for event in pygame.event.get():
