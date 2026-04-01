@@ -27,7 +27,7 @@ THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 #Player
 class Player(pygame.sprite.Sprite):
     def __init__(self):
-        super().__init()
+        super().__init__()
         self.image = pygame.Surface((40, 60))
         self.image.fill(BLUE)
         self.rect = self.image.get_rect()
