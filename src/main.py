@@ -35,7 +35,7 @@ class Game:
             if event.type == pygame.QUIT:
                 self.running = False
 
-    def _update(self,delta):
+    def _update(self, delta):
         pass
 
     def _draw(self):
@@ -45,4 +45,7 @@ class Game:
     def run(self):
         while self.running:
             self.clock.tick(MAX_FPS)
-            delta = self.clock
+            delta = self.clock.get_time() / 1000.0
+            self._update(delta)
+            self._draw()
+        pygame.quit()
