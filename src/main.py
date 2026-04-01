@@ -56,7 +56,6 @@ class Player(pygame.sprite.Sprite):
 
         #Jumpingg
         if keys[pygame.K_SPACE] and not self.is_jumping:
-            self.is_jumping = True
             self.velocity_y = self.jump_power
 
         #Gravityy
