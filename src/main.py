@@ -99,7 +99,6 @@ class Game:
             self.all_sprites.add(p)
 
         #Sprites
-        self.all_sprites = pygame.sprite.Group()
         self.player = Player()
         self.all_sprites.add(self.player)
 
