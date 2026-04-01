@@ -70,6 +70,8 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = False
             self.velocity_y = 0
 
+
+
 #Game
 class Game:
     def __init__(self):
