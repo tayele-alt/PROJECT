@@ -85,9 +85,10 @@ class Game:
         self.all_sprites.add(self.player)
 
     def _handle_events(self):
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                self.running = False
+        running = not pygame.event.peek(pygame.QUIT)
+        if not running:
+            self.run = False
+        pygame.event.clear()
 
     def _update(self, delta):
         self.all_sprites.update(delta)
