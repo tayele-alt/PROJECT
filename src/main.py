@@ -45,7 +45,7 @@ class Player(pygame.sprite.Sprite):
         self.velocity_y = 0
         self.has_flag = False
 
-    def update(self, delta):
+    def update(self, delta, game_platforms=None):
         keys = pygame.key.get_pressed()
     
         # Movement
