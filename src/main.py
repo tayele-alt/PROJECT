@@ -70,8 +70,12 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = False
             self.velocity_y = 0
 
-
-
+#Platorms
+class Platfrom(pygame.sprite.Sprite):
+    def __init__(self, x, y, w, h):
+        self.image = pygame.Surface((w, h))
+        self.image.fill(GRAY)
+        self.rect = self.image.get_rect(topleft=(x,y))
 #Game
 class Game:
     def __init__(self):
