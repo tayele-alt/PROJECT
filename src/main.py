@@ -34,7 +34,7 @@ class Player(pygame.sprite.Sprite):
         self.reset()
         self.speed = PLAYER_SPEED
         self.velocity_y = 0
-        self.jump_power + PLAYER_JUMP_POWER
+        self.jump_power = PLAYER_JUMP_POWER
         self.gravity = PLAYER_GRAVITY
         self.is_jumping = False
         self.has_flag = False
