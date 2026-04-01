@@ -110,7 +110,10 @@ class Game:
         pygame.event.clear()
 
     def _update(self, delta):
-        self.all_sprites.update(delta)
+        self.player.update(delta, self.platforms)
+        for sprite in self.all_sprites:
+            if sprite != self.player:
+                sprite.update(delta)
 
     def _draw(self):
         self.screen.fill(BLACK)
