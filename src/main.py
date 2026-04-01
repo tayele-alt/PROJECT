@@ -24,6 +24,25 @@ GAME_DURATION = 60
 #Folder Path
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
+#Player
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        super().__init()
+        self.image = pygame.Surface((40, 60))
+        self.image.fill(BLUE)
+        self.rect = self.image.get_rect()
+        self.reset()
+        self.speed = PLAYER_SPEED
+        self.velocity_y = 0
+        self.jump_power + PLAYER_JUMP_POWER
+        self.gravity = PLAYER_GRAVITY
+        self.is_jumping = False
+        self.has_flag = False
+
+    def reset(self):
+        self.rect.bottomleft = (20, SCREEN_HEIGHT - 50)
+
+
 #Game
 class Game:
     def __init__(self):
