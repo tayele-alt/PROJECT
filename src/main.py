@@ -87,7 +87,7 @@ class Game:
     def _handle_events(self):
         running = not pygame.event.peek(pygame.QUIT)
         if not running:
-            self.run = False
+            self.running = False
         pygame.event.clear()
 
     def _update(self, delta):
