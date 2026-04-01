@@ -86,6 +86,15 @@ class Game:
         self.clock = pygame.time.Clock()
         self.running = True
 
+        #Platforms
+        self.platforms = pygame.sprite.Group()
+        for (x, y, w, h) in [
+            (0, 450, 800, 20)
+        ]:
+            p = Platfrom(x, y, w, h)
+            self.platforms.add(p)
+            self.all_sprites(p)
+
         #Sprites
         self.all_sprites = pygame.sprite.Group()
         self.player = Player()
