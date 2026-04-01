@@ -20,3 +20,24 @@ GAME_DURATION = 60
 
 #Folder Path
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+
+#Game
+class Game:
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+        pygame.display.set_caption(GAME_TITLE)
+        self.clock = pygame.time.Clock()
+        self.running = True
+
+    def _handle_events(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+
+    def _update(self,delta):
+        pass
+
+    def _draw(self):
+        self.screen.fill(BLACK)
+        pygame.display.flip()
