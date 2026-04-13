@@ -192,10 +192,8 @@ class Game:
 
     def _draw(self):
         self.screen.fill(BLACK)
-        for i in range(0, SCREEN_WIDTH, 40):
-            pygame.draw.line(self.screen, DARK_GRAY, (i, 0), (i, SCREEN_HEIGHT), 1)
-        for i in range(0, SCREEN_HEIGHT, 40):
-            pygame.draw.line(self.screen, DARK_GRAY, (0, i), (SCREEN_WIDTH, i), 1)
+        pygame.draw.line(self.screen, GRAY, (0, SCREEN_HEIGHT -50), (SCREEN_WIDTH, SCREEN_HEIGHT - 50), 2)
+        self.all_sprites.draw(self.screen)
         
         score_text = self.font.render(f"Score: {self.score}", True, WHITE)
         self.screen.blit(score_text,(10, 10))
