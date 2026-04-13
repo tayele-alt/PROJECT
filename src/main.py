@@ -79,6 +79,16 @@ class Platfrom(pygame.sprite.Sprite):
         self.image = pygame.Surface((w, h))
         self.image.fill(GRAY)
         self.rect = self.image.get_rect(topleft=(x,y))
+
+#Flag
+class Flag(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = pygame.Surface((20, 30))
+        self.image.fill(YELLOW)
+        self.rect = self.image.get_rect(bottomleft=(x,y))
+        self.collected = False
+        
 #Game
 class Game:
     def __init__(self):
