@@ -121,7 +121,7 @@ class Game:
         self.all_sprites.add(self.flag)
 
         self.score = 0
-        
+        self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
 
 
