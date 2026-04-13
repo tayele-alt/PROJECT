@@ -116,7 +116,7 @@ class Game:
         #Sprites
         self.player = Player()
         self.all_sprites.add(self.player)
-        
+
         self.flag = Flag(720, 450)
         self.all_sprites(self.flag)
 
@@ -133,6 +133,11 @@ class Game:
         for sprite in self.all_sprites:
             if sprite != self.player:
                 sprite.update(delta)
+#
+            if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
+                self.flag.collected = True
+                self.player.has_flag = True
+                self.flag.kill()
 
     def _draw(self):
         self.screen.fill(BLACK)
