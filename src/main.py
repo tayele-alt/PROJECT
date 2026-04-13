@@ -54,7 +54,7 @@ class Player(pygame.sprite.Sprite):
         # Movement
         if keys[pygame.K_LEFT]:
             self.rect.x -= self.speed * delta
-        if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
+        if keys[pygame.K_RIGHT]:
             self.rect.x += self.speed * delta
 
         #Wall
