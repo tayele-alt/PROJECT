@@ -214,6 +214,7 @@ class Game:
             delta = self.clock.get_time() / 1000.0
             self._update(delta)
             self._draw()
+        self._game_over_screen()
         pygame.quit()
 
 if __name__ == "__main__":
