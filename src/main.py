@@ -236,11 +236,13 @@ class Game:
             self.flag.kill()
 
         #Return flag to base
-            if self.player.has_flag and self.player.rect.left <=60:
-                self.player.has_flag = False
-                self.score +=1
-                self.flag = Flag(720, 130)
-                self.all_sprites.add(self.flag)
+        if self.player.has_flag and self.player.rect.left <=60:
+            self.player.has_flag = False
+            self.score +=1
+            self.flag = Flag(720, 130)
+            self.all_sprites.add(self.flag)
+
+        #When enemy catch
 
     def _draw(self):
         self.screen.fill(BLACK)
