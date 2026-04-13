@@ -98,7 +98,7 @@ class Platfrom(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=(x,y))
 
 #Enemy
-class Enemy(pygame,sprite.Sprite):
+class Enemy(pygame.sprite.Sprite):
     def __init__(self, x, y):
         super().__init__()
         self.image = pygame.Surface((40,60))
