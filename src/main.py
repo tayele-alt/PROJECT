@@ -227,7 +227,7 @@ class Game:
             self.running = False
 
         self.player.update(delta, self.platforms)
-        self.enemy,update(delta, self.player, self.platforms)
+        self.enemy.update(delta, self.player, self.platforms)
 
         #Pickup the Flag
         if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
