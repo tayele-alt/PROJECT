@@ -160,6 +160,9 @@ class Game:
         score_text = self.font.render(f"Score: {self.score}", True, WHITE)
         self.screen.blit(score_text,(10, 10))
 
+        timer_text = self.font.render(f"Time: {int(self.time_left)}", True, WHITE)
+        self.screen.blit(timer_text, (SCREEN_WIDTH - 120, 10))
+
         if self.player.has_flag:
             flag_text = self.font.render("Flag captured! Return to your base!", True, YELLOW)
             self.screen.blit(flag_text, (180,10))
