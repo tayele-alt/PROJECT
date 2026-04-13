@@ -149,7 +149,7 @@ class Game:
             if self.player.has_flag and self.player.rect.left <=60:
                 self.player.has_flag = False
                 self.score +=1
-                self.flag = Flag(720, 450)
+                self.flag = Flag(720, 180)
                 self.all_sprites.add(self.flag)
 
     def _draw(self):
