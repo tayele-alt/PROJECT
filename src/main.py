@@ -133,7 +133,8 @@ class Game:
 
     def _update(self, delta):
         self.time_left -= delta
-        
+        if self.time_left <= 0:
+            self.running = False
         self.player.update(delta, self.platforms)
         for sprite in self.all_sprites:
             if sprite != self.player:
