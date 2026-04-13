@@ -97,6 +97,15 @@ class Platfrom(pygame.sprite.Sprite):
         pygame.draw.rect(self.image, CYAN, (0, 0, w, 3))
         self.rect = self.image.get_rect(topleft=(x,y))
 
+#Enemy
+class Enemy(pygame,sprite.Sprite):
+    def __init__(self, x, y):
+        super().__init__()
+        self.image = pygame.Surface((40,60))
+        self.image.fill(RED)
+        pygame.draw.rect(self.image, ORANGE, (5, 5, 30, 20))
+
+
 #Flag
 class Flag(pygame.sprite.Sprite):
     def __init__(self, x, y):
