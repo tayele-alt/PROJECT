@@ -120,6 +120,8 @@ class Game:
         self.flag = Flag(720, 450)
         self.all_sprites.add(self.flag)
 
+        self.score = 0
+        self.font = pygame.font.SysFont(None, 36)
 
 
     def _handle_events(self):
