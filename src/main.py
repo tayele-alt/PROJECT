@@ -75,16 +75,17 @@ class Player(pygame.sprite.Sprite):
         self.is_jumping = True
         for plat in game_platforms:
             if self.rect.colliderect(plat.rect):
-                self.rect.bottom = plat.rect.top
-                self.velocity_y = 0
-                self.is_jumping = False
-            elif self.velocity_y < 0 and self.rect.top >=plat.rect.top:
-                self.rect.top = plat.rect.bottom
-                self.velocity_y = 0
-            if self.rect.right > plat.rect.left and self.rect.left < plat.rect.left and abs(self.rect.right - plat.rect.left) < 10:
-                self.rect.left = plat.rect.right
-            if self.rect.left < plat.rect.right and self.rect.right > plat.rect.right and abs(self.rect.left - plat.rect.right) <10:
-                self.rect.left = plat.rect.right
+                if self.velocity_y >= 0 and self.rect.bottom <= plat.rect.bottom:
+                    self.rect.bottom = plat.rect.top
+                    self.velocity_y = 0
+                    self.is_jumping = False
+                elif self.velocity_y < 0 and self.rect.top >=plat.rect.top:
+                    self.rect.top = plat.rect.bottom
+                    self.velocity_y = 0
+                if self.rect.right > plat.rect.left and self.rect.left < plat.rect.left and abs(self.rect.right - plat.rect.left) < 10:
+                    self.rect.left = plat.rect.right
+                if self.rect.left < plat.rect.right and self.rect.right > plat.rect.right and abs(self.rect.left - plat.rect.right) <10:
+                    self.rect.left = plat.rect.right
 
 
 #Platorms
