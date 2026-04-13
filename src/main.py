@@ -108,6 +108,13 @@ class Enemy(pygame,sprite.Sprite):
         self.speed = 120
         self.gravity = PLAYER_GRAVITY
 
+    def update(self, delta, player, game_platforms):
+        #To chase player horizontally
+        if player.rect.centerx < self.rect.centerx:
+            self.rect.x -= self.speed * delta
+        else:
+            self.rect.x += self.speed * delta
+
 
 #Flag
 class Flag(pygame.sprite.Sprite):
