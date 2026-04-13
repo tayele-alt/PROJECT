@@ -57,6 +57,12 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_RIGHT] and self.rect.right < SCREEN_WIDTH:
             self.rect.x += self.speed * delta
 
+        #Wall
+        if self.rect.left < 10:
+            self.rect.left = 10
+        if self.rect.right > SCREEN_WIDTH - 10:
+            self.rect.right = SCREEN_WIDTH - 10
+
         #Jumpingg
         if keys[pygame.K_SPACE] and not self.is_jumping:
             self.velocity_y = self.jump_power
