@@ -181,6 +181,9 @@ class Game:
         self.flag = Flag(720, 130)
         self.all_sprites.add(self.flag)
 
+
+        self.enemy = Enemy(600, 480)
+        self.all_sprites.add(self.enemy)
         self.score = 0
         self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
