@@ -215,7 +215,6 @@ class Game:
             self._update(delta)
             self._draw()
         self._game_over_screen()
-        pygame.quit()
 
 if __name__ == "__main__":
     game = Game()
