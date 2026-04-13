@@ -118,7 +118,7 @@ class Game:
         self.all_sprites.add(self.player)
 
         self.flag = Flag(720, 450)
-        self.all_sprites(self.flag)
+        self.all_sprites.add(self.flag)
 
 
 
