@@ -88,7 +88,7 @@ class Flag(pygame.sprite.Sprite):
         self.image.fill(YELLOW)
         self.rect = self.image.get_rect(bottomleft=(x,y))
         self.collected = False
-        
+
 #Game
 class Game:
     def __init__(self):
@@ -116,6 +116,9 @@ class Game:
         #Sprites
         self.player = Player()
         self.all_sprites.add(self.player)
+        self.flag = Flag()
+        self.all_sprites(self.flag)
+        
 
     def _handle_events(self):
         running = not pygame.event.peek(pygame.QUIT)
