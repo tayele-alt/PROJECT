@@ -116,9 +116,11 @@ class Game:
         #Sprites
         self.player = Player()
         self.all_sprites.add(self.player)
-        self.flag = Flag()
-        self.all_sprites(self.flag)
         
+        self.flag = Flag(720, 450)
+        self.all_sprites(self.flag)
+
+
 
     def _handle_events(self):
         running = not pygame.event.peek(pygame.QUIT)
