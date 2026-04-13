@@ -151,6 +151,13 @@ class Game:
         pygame.draw.line(self.screen, GRAY, (0, SCREEN_HEIGHT -50), (SCREEN_WIDTH, SCREEN_HEIGHT - 50), 2)
         self.all_sprites.draw(self.screen)
         
+        score_text = self.font.render(f"Score: {self.score}", True, WHITE)
+        self.screen.blit(score_text,(10, 10))
+
+        if self.player.has_flag:
+            flag_text = self.font.render("Flag captured! Return to your base!", True, YELLOW)
+            self.screen.blit(flag_text, (180,10))
+
         pygame.display.flip()
 
     def run(self):
