@@ -13,7 +13,10 @@ BLUE = (70, 130, 255)
 GREEN = (50, 200, 80)
 RED = (220, 60, 60)
 YELLOW = (225, 215, 0)
-GRAY = (120, 120, 120)
+GRAY = (90, 100, 115)
+DARK_GRAY = (40, 45, 55)
+ORANGE = (255, 140, 0)
+CYAN = (0, 220, 220)
 
 #Game Constants
 PLAYER_SPEED = 300
