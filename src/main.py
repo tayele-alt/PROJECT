@@ -136,6 +136,19 @@ class Game:
         self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
 
+    def _game_over_screen(self):
+        self.screen.fill(BLACK)
+        title = self.font.render("GAME OVER", True, RED)
+        score_text = self.font.render(f"Final Score: {self.score}", True, WHITE)
+        restart_text = self.font.render("Press R to Restart or Q to Quit", True, GRAY)
+
+        self.screen.blit(title, (SCREEN_WIDTH // 2 - title.get_width() // 2, 160))
+        self.screen.blit(score_text, (SCREEN_WIDTH // 2 - score_text.get_width() // 2, 230))
+        self.screen.blit(restart_text, (SCREEN_WIDTH // 2 - restart_text.get_width() // 2, 300))
+        pygame.display.flip()
+
+        
+
 
     def _handle_events(self):
         running = not pygame.event.peek(pygame.QUIT)
