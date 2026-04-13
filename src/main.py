@@ -225,18 +225,17 @@ class Game:
         self.time_left -= delta
         if self.time_left <= 0:
             self.running = False
-            
-        self.player.update(delta, self.platforms)
-        for sprite in self.all_sprites:
-            if sprite != self.player:
-                sprite.update(delta)
-#Pickup the Flag
-            if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
-                self.flag.collected = True
-                self.player.has_flag = True
-                self.flag.kill()
 
-#Return flag to base
+        self.player.update(delta, self.platforms)
+        self.enemy,update(delta, self.player, self.platforms)
+
+        #Pickup the Flag
+        if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
+            self.flag.collected = True
+            self.player.has_flag = True
+            self.flag.kill()
+
+        #Return flag to base
             if self.player.has_flag and self.player.rect.left <=60:
                 self.player.has_flag = False
                 self.score +=1
