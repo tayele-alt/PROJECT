@@ -117,7 +117,7 @@ class Game:
         self.player = Player()
         self.all_sprites.add(self.player)
 
-        self.flag = Flag(720, 450)
+        self.flag = Flag(720, 180)
         self.all_sprites.add(self.flag)
 
         self.score = 0
