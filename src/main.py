@@ -133,11 +133,15 @@ class Game:
         for sprite in self.all_sprites:
             if sprite != self.player:
                 sprite.update(delta)
-#
+#Pickup the Flag
             if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
                 self.flag.collected = True
                 self.player.has_flag = True
                 self.flag.kill()
+
+#Return flag to base
+            if self.player.has_flag and self.player.rect.left <=60:
+                self.player.has
 
     def _draw(self):
         self.screen.fill(BLACK)
