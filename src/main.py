@@ -132,6 +132,8 @@ class Game:
         pygame.event.clear()
 
     def _update(self, delta):
+        self.time_left -= delta
+        
         self.player.update(delta, self.platforms)
         for sprite in self.all_sprites:
             if sprite != self.player:
