@@ -242,7 +242,13 @@ class Game:
             self.flag = Flag(720, 130)
             self.all_sprites.add(self.flag)
 
-        #When enemy catch
+        #When enemy catches player
+        if self.player.rect.colliderect(self.enemy.rect):
+            if self.player.has_flag:
+                self.player.has_flag = False
+                self.flag = Flag(720, 130)
+                self.all_sprites.add(self.flag)
+            self.player.reset()
 
     def _draw(self):
         self.screen.fill(BLACK)
