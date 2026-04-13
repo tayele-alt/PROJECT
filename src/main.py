@@ -115,6 +115,23 @@ class Enemy(pygame,sprite.Sprite):
         else:
             self.rect.x += self.speed * delta
 
+        #Gravity
+        self.velocity_y += self.gravity * delta
+        self.rect.y += self.velocity_y * delta
+
+        #Platform collision
+        for plat in game_platforms:
+            if self.rect.colliderect(plat.rect):
+                if self.velocity_y >= 0 and self.rect.bottom <= plat.rect.bottom:
+                    self.rect.bottom = plat.rect.top
+                    self.velocity_y = 0
+
+        #Wall
+        if self.rect.left < 10:
+            self.rect.left = 10
+        if self.rect.right > SCREEN_WIDTH - 10:
+            self.rect.right = SCREEN_WIDTH - 10
+
 
 #Flag
 class Flag(pygame.sprite.Sprite):
