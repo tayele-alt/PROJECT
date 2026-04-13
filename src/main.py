@@ -147,7 +147,20 @@ class Game:
         self.screen.blit(restart_text, (SCREEN_WIDTH // 2 - restart_text.get_width() // 2, 300))
         pygame.display.flip()
 
-        
+        waiting = True
+        while waiting:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_r:
+                        self.__init__()
+                        self.run()
+                        waiting = False
+                    if event.key == pygame.K_q:
+                        pygame.quit()
+                        exit()
 
 
     def _handle_events(self):
