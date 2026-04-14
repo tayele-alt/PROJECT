@@ -428,7 +428,7 @@ class Game:
             self.player.has_flag = True
             self.flag.kill()
 
-        #Return flag to base
+        #Return flag to base 
         if self.player.has_flag and self.player.rect.left <=90 and self.player.rect.bottom >= 350:
             self.player.has_flag = False
             self.score +=1
