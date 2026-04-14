@@ -340,7 +340,8 @@ class Game:
                 self.screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 420))
 
                 pygame.display.flip()
-                
+
+            
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
