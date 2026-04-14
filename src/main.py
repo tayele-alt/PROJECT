@@ -329,7 +329,18 @@ class Game:
             self.screen.blit(title, (SCREEN_WIDTH // 2 - title.get_width() // 2, 60))
 
             subtitle = self.font.render("Select starting level", True, CYAN)
-            self.screen.blit(subtitle)
+            self.screen.blit(subtitle, (SCREEN_WIDTH // 2 - subtitle.get_width() // 2, 120))
+
+            for i, label in enumerate(levels):
+                color = YELLOW if i == selected_level else WHITE
+                text = self.font.render(label, True, color)
+                self.screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() // 2, 180 + i * 50))
+
+                hint = self.font.render("UP/DOWN to select, ENTER to start", True, GRAY)
+                self.screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 420))
+
+                pygame.display.flip()
+                
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
