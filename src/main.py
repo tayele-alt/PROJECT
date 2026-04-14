@@ -353,7 +353,7 @@ class Game:
     def _draw(self):
         self.screen.fill(BLACK)
         pygame.draw.rect(self.screen, (0, 60, 0), (0, 350, 90, 130))
-        pygame.draw.rect(self.screen, GREEN, (0, 350, 65, 130), 2)
+        pygame.draw.rect(self.screen, GREEN, (0, 350, 90, 130), 2)
         for i in range(0, SCREEN_WIDTH, 40):
             pygame.draw.line(self.screen, DARK_GRAY, (i, 0), (i, SCREEN_HEIGHT), 1)
         for i in range(0, SCREEN_HEIGHT, 40):
