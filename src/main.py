@@ -140,6 +140,20 @@ class Enemy(pygame.sprite.Sprite):
         if self.rect.right > SCREEN_WIDTH - 10:
             self.rect.right = SCREEN_WIDTH - 10
 
+#Bullet
+class Bullet(pygame.sprite.Sprite):
+    def __init__(self, x, y, direction):
+        super().__init__()
+        self.image = pygame.Surface((12,6))
+        self.image.fill(ORANGE)
+        self.rect = self.image.get_rect(centery=y, x=x)
+        self.speed = 400 * direction
+
+    def update(self, delta, game_platforms=None):
+        self.rect.x += self.speed * delta
+        if self.rect.right < 0 or self.rect.left > SCREEN_WIDTH:
+            self.kill()
+
 
 #Flag
 class Flag(pygame.sprite.Sprite):
