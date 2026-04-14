@@ -280,6 +280,7 @@ class Game:
         self.enemy = Enemy(600, 480)
         self.guns = pygame.sprite.Group()
         self.bullets = pygame.sprite.Group()
+        self.enemy_bullets = pygame.sprite.Group()
         for (x, y, direction) in [
             (10, 150, 1),
             (790, 280, -1),
