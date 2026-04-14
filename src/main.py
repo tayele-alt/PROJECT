@@ -167,7 +167,16 @@ class Bullet(pygame.sprite.Sprite):
 #Enemy Bullet
 class EnemyBullet(pygame.sprite.Sprite):
     def __init__(self, x, y, direction):
-        super().__init
+        super().__init__()
+        self.image = pygame.Surface((10, 10))
+        self.image.fill(ORANGE)
+        self.rect = self.image.get_rect(center=(x, y))
+        self.speed = 300 * direction
+
+    def update(self, delta, game_platforms=None):
+        self.rect.x += self.speed * delta
+        if self.rect.right < 0 or self.rect.left > SCREEN_WIDTH:
+            self.kill()
 
 #Gun
 class Gun(pygame.sprite.Sprite):
