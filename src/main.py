@@ -321,6 +321,7 @@ class Game:
         if self.player.has_flag and self.player.rect.left <=60:
             self.player.has_flag = False
             self.score +=1
+            self.enemy.speed = self.enemy.base_speed + (self.score * 20)
             self.flag = Flag(720, 130)
             self.all_sprites.add(self.flag)
 
