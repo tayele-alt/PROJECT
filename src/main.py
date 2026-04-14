@@ -89,7 +89,8 @@ class Player(pygame.sprite.Sprite):
                 if self.rect.centerx < plat.rect.centerx:
                     self.rect.right = plat.rect.left
                 else:
-                    self.rect
+                    self.rect.left = plat.rect.right
+        self.is_jumping = not on_ground
 
 
 #Platorms
