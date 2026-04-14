@@ -119,7 +119,8 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = 120
         self.gravity = PLAYER_GRAVITY
         self.velocity_y = 0
-        
+        self.is_jumping = False
+        self.jump_timer = 0
 
     def update(self, delta, player, game_platforms):
         #To chase player horizontally
