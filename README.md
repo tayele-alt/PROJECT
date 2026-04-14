@@ -15,6 +15,20 @@ The player must navigate platforms, avoid bullets, and survive long enough to br
 * Score, timer, and life system
 * Level selection at the start screen
 
+
+## OOP Structure
+
+The game uses several classes to organize game logic:
+
+- **Player** – Handles player movement, jumping, and flag interaction.
+- **Enemy** – AI enemy that chases the player and becomes stronger as the score increases.
+- **Platform** – Represents platforms that the player and enemy can stand on.
+- **Bullet / EnemyBullet** – Projectiles fired by turrets or enemies.
+- **Gun** – Stationary turrets that shoot bullets at intervals.
+- **Flag** – The object the player must capture and return to base.
+- **Game** – Controls the main game loop, updates, rendering, and game state.
+
+
 ## Game Objective
 
 1. Move across the platforms to reach the flag.
