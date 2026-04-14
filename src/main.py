@@ -164,6 +164,11 @@ class Bullet(pygame.sprite.Sprite):
         if self.rect.right < 90 and self.speed < 0:
             self.kill()
 
+#Enemy Bullet
+class EnemyBullet(pygame.sprite.Sprite):
+    def __init__(self, x, y, direction):
+        super().__init
+
 #Gun
 class Gun(pygame.sprite.Sprite):
     def __init__(self, x, y, direction):
