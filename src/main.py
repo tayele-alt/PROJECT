@@ -83,11 +83,13 @@ class Player(pygame.sprite.Sprite):
                 elif self.velocity_y < 0 and self.rect.top >=plat.rect.top:
                     self.rect.top = plat.rect.bottom
                     self.velocity_y = 0
-                elif self.rect.right > plat.rect.left and self.rect.left < plat.rect.left:
-                    self.rect.left = plat.rect.right
-                elif self.rect.left < plat.rect.right and self.rect.right > plat.rect.right:
-                    self.rect.left = plat.rect.right
-        self.is_jumping = not on_ground
+        #Horizontal collision
+        for plat in game_platforms:
+            if self.rect.colliderect(plat.rect):
+                if self.rect.centerx < plat.rect.centerx:
+                    self.rect.right = plat.rect.left
+                else:
+                    self
 
 
 #Platorms
