@@ -76,3 +76,8 @@ README.md     - Project description
 
 * Python
 * Pygame
+
+
+## AI Assistance
+
+Some AI tools were used during development to help debug code, improve structure, and generate documentation. All code was reviewed and understood before being included in the project.
