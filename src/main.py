@@ -390,7 +390,7 @@ class Game:
             self.score +=1
             self.enemy.base_speed = 120 + (self.score * 15)
             self.enemy.speed = self.enemy.base_speed
-            self.enemy.level - min(self.score, 3)
+            self.enemy.level = min(self.score, 3)
             self.flag = Flag(720, 130)
             self.all_sprites.add(self.flag)
 
