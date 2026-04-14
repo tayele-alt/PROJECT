@@ -331,9 +331,7 @@ class Game:
                 self.player.has_flag = False
                 self.flag = Flag(720, 130)
                 self.all_sprites.add(self.flag)
-            self.player.reset()
-            self.enemy.rect.bottomleft = (600, 480)
-            self.enemy.velocity_y = 0
+            self._player_hit()
 
     def _draw(self):
         self.screen.fill(BLACK)
