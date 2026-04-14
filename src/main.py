@@ -312,7 +312,15 @@ class Game:
                 self.high_score = self.score
             self.running = False
 
-        
+    #Option
+    def _start_screen(self):
+        selected_level = 0
+        levels = [
+            "Level 1 - Enemy Chases You"
+            "Level 2 - Enemy Speed Increases"
+            "Level 3 - Enemy jumps platforms"
+            "Level 4 - Enemy starts shoots"
+        ]
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
