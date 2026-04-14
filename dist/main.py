@@ -65,7 +65,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.right = SCREEN_WIDTH - 10
 
         #Jumpingg
-        if keys[pygame.K_SPACE] or keys[pygame.K_w] or keys[pygame.K_UP] and not self.is_jumping:
+        if (keys[pygame.K_SPACE] or keys[pygame.K_w] or keys[pygame.K_UP]) and not self.is_jumping:
             self.velocity_y = self.jump_power
             self.is_jumping = True
 
