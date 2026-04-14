@@ -211,6 +211,8 @@ class EnemyBullet(pygame.sprite.Sprite):
         self.rect.x += self.speed * delta
         if self.rect.right < 0 or self.rect.left > SCREEN_WIDTH:
             self.kill()
+        if self.rect.right < 90:
+            self.kill()
 
 #Gun
 class Gun(pygame.sprite.Sprite):
