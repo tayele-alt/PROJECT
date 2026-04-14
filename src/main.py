@@ -256,6 +256,8 @@ class Game:
         self.enemy.rect.bottomleft = (600, 480)
         self.enemy.velocity_y = 0
         if self.lives <= 0:
+            if self.score > self.high_score:
+                self.high_score = self.score
             self.running = False
 
 
