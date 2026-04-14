@@ -128,10 +128,22 @@ class Enemy(pygame.sprite.Sprite):
         self.boosting = False
         self.boost_timer = 0
 
-    
 
     def update(self, delta, player, game_platforms):
-        #To chase player horizontally
+
+    # Level 4 **Speed boost when player has flag
+        if self.level >= 1 and player.has_flag and not self.boosting:
+            self.boosting = True
+            self.boost_timer = 3
+            self.speed = self.base_speed * 2
+
+        if self.boosting:
+            self.boost_timer -= delta
+            if self.boost_timer <= 0:
+                self.boosting = False
+                self.speed = self.base_speed
+
+    #To chase player horizontally
         if player.rect.centerx < self.rect.centerx:
             self.rect.x -= self.speed * delta
         else:
