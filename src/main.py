@@ -341,7 +341,21 @@ class Game:
 
                 pygame.display.flip()
 
-            
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_UP or event.key == pygame.K_w:
+                        selected_level = (selected_level - 1) % len(levels)
+                    if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                        selected_level = (selected_level + 1) % len(levels)
+                    if event.key == pygame.K_RETURN:
+                        self.enemy.level = selected_level
+                        if selected_level >= 1:
+                            self.enemy.base_speed = 120 + (selected_level * 15)
+                            self.enemy.speed = self.enemy.base_speed
+                        return
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
