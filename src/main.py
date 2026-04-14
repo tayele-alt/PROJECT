@@ -235,7 +235,7 @@ class Game:
         for (x, y, direction) in [
             (10, 150, 1),
             (790, 280, -1),
-            (10, 200, 1),
+            (10, 380, 1),
             (790, 420, -1),
         ]:
             g = Gun(x, y, direction)
