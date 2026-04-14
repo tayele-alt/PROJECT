@@ -163,7 +163,7 @@ class Bullet(pygame.sprite.Sprite):
 #Gun
 class Gun(pygame.sprite.Sprite):
     def __init__(self, x, y, direction):
-        super().__init__
+        super().__init__()
         self.image = pygame.Surface((18,18))
         self.image.fill(RED)
         pygame.draw.rect(self.image, ORANGE, ( 0, 6, 18, 6))
