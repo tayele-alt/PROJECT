@@ -171,6 +171,7 @@ class Enemy(pygame.sprite.Sprite):
                 if player.rect.top < self.rect. top - 30:
                     self.velocity_y = PLAYER_JUMP_POWER * 0.85
                     self.is_jumping = True
+                    self.jump_timer = 0
 
         #Wall
         if self.rect.left < 10:
