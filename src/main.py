@@ -459,7 +459,7 @@ class Game:
                     self.player.has_flag = False
                     self.flag = Flag(720, 130)
                     self.all_sprites.add(self.flag)
-                self.self._player_hit()
+                self._player_hit()
 
         #When enemy catches player
         if self.player.rect.colliderect(self.enemy.rect):
