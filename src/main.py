@@ -22,7 +22,7 @@ CYAN = (0, 220, 220)
 PLAYER_SPEED = 300
 PLAYER_JUMP_POWER = -600
 PLAYER_GRAVITY = 1200
-GAME_DURATION = 60
+GAME_DURATION = 120
 
 #Folder Path
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
