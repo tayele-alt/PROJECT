@@ -143,8 +143,8 @@ class Enemy(pygame.sprite.Sprite):
         #Wall
         if self.rect.left < 10:
             self.rect.left = 10
-        if self.rect.left < 65:
-            self.rect.left = 65
+        if self.rect.left < 90:
+            self.rect.left = 90
         if self.rect.right > SCREEN_WIDTH - 10:
             self.rect.right = SCREEN_WIDTH - 10
 
