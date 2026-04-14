@@ -290,7 +290,15 @@ class Game:
 
         self.bullets.update(self.clock.get_time() / 1000.0)
 
-        #Bullet 
+        #When bullet hits player
+        for bullet in self.bullets:
+            if bullet.rect.colliderect(self.player.rect):
+                bullet.kill()
+                if self.player.has_flag:
+                    self.player.has_flag = False
+                    self.flag = Flag(720, 130)
+                    self.all_sprites.add(self.flag)
+                self.player.reset()
 
         #Pickup the Flag
         if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
