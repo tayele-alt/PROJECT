@@ -351,7 +351,7 @@ class Game:
                         selected_level = (selected_level - 1) % len(levels)
                     if event.key == pygame.K_DOWN or event.key == pygame.K_s:
                         selected_level = (selected_level + 1) % len(levels)
-                    if event.key == pygame.K_RETURN:
+                    if event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER:
                         self.enemy.level = selected_level
                         if selected_level >= 1:
                             self.enemy.base_speed = 120 + (selected_level * 15)
