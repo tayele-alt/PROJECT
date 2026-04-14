@@ -299,6 +299,8 @@ class Game:
     def _update(self, delta):
         self.time_left -= delta
         if self.time_left <= 0:
+            if self.score > self.high_score:
+                self.high_score = self.score
             self.running = False
 
         self.player.update(delta, self.platforms)
