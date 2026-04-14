@@ -244,6 +244,8 @@ class Game:
 
         self.all_sprites.add(self.enemy)
         self.score = 0
+        if not hasattr(self, 'high_score'):
+            self.highs_score = 0
         self.lives = 3
         self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
