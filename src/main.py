@@ -339,6 +339,7 @@ class Game:
                 hint = self.font.render("UP/DOWN to select, ENTER to start", True, GRAY)
                 self.screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 420))
 
+                self.clock.tick(MAX_FPS)
                 pygame.display.flip()
 
             for event in pygame.event.get():
