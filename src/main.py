@@ -104,7 +104,6 @@ class Platfrom(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.Surface((w, h))
         self.image.fill(GRAY)
-        pygame.draw.rect(self.image, CYAN, (0, 0, w, 3))
         self.rect = self.image.get_rect(topleft=(x,y))
 
 #Enemy
