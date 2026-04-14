@@ -70,8 +70,8 @@ class Player(pygame.sprite.Sprite):
             self.is_jumping = True
 
         #Gravityy
-            self.velocity_y += self.gravity * delta
-            self.rect.y += self.velocity_y * delta
+        self.velocity_y += self.gravity * delta
+        self.rect.y += self.velocity_y * delta
 
         #Platform collision
         for plat in game_platforms:
