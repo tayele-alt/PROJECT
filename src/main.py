@@ -312,6 +312,7 @@ class Game:
                 self.high_score = self.score
             self.running = False
 
+        
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
