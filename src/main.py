@@ -387,10 +387,9 @@ class Game:
 
 
     def _handle_events(self):
-        running = not pygame.event.peek(pygame.QUIT)
-        if not running:
-            self.running = False
-        pygame.event.clear()
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
 
     def _update(self, delta):
         self.time_left -= delta
