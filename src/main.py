@@ -280,7 +280,7 @@ class Game:
 
         #Shooting Gun
         for gun in self.guns:
-            gun.timer += 0
+            gun.timer += delta
             if gun.timer >= gun.shoot_interval:
                 gun.timer = 0
                 bx = gun.rect.right if gun.direction == 1 else gun.rect.left
