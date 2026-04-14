@@ -336,11 +336,11 @@ class Game:
                 text = self.font.render(label, True, color)
                 self.screen.blit(text, (SCREEN_WIDTH // 2 - text.get_width() // 2, 180 + i * 50))
 
-                hint = self.font.render("UP/DOWN to select, ENTER to start", True, GRAY)
-                self.screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 420))
+            hint = self.font.render("UP/DOWN to select, ENTER to start", True, GRAY)
+            self.screen.blit(hint, (SCREEN_WIDTH // 2 - hint.get_width() // 2, 420))
 
-                self.clock.tick(MAX_FPS)
-                pygame.display.flip()
+            self.clock.tick(MAX_FPS)
+            pygame.display.flip()
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
