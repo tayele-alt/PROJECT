@@ -398,7 +398,7 @@ class Game:
         if self.enemy.level >= 3:
             self.enemy.shoot_timer += delta
             if self.enemy.shoot_timer >= 2.0:
-                self.enemy.shoot_tier = 0
+                self.enemy.shoot_timer = 0
                 direction = 1 if self.player.rect.centerx > self.enemy.rect.centerx else -1
                 eb = EnemyBullet(self.enemy.rect.centerx, self.enemy.rect.centery, direction)
                 self.enemy_bullets.add(eb)
@@ -413,7 +413,7 @@ class Game:
                     self.player.has_flag = False
                     self.flag = Flag(720, 130)
                     self.all_sprites.add(self.flag)
-                self,self._player_hit()
+                self.self._player_hit()
 
         #When enemy catches player
         if self.player.rect.colliderect(self.enemy.rect):
