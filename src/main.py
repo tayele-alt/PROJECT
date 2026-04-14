@@ -496,8 +496,8 @@ class Game:
         pygame.display.flip()
 
     def run(self):
+        self._start_screen()
         while self.running:
-            self._start_screen()
             self._handle_events()
             self.clock.tick(MAX_FPS)
             delta = self.clock.get_time() / 1000.0
