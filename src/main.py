@@ -161,6 +161,8 @@ class Bullet(pygame.sprite.Sprite):
         self.rect.x += self.speed * delta
         if self.rect.right < 0 or self.rect.left > SCREEN_WIDTH:
             self.kill()
+        if self.rect.right < 65:
+            self.kill()
 
 #Gun
 class Gun(pygame.sprite.Sprite):
