@@ -353,7 +353,7 @@ class Game:
 
         if self.player.has_flag:
             flag_text = self.font.render("Flag captured! Return to your base!", True, YELLOW)
-            self.screen.blit(flag_text, (180,10))
+            self.screen.blit(flag_text, (SCREEN_WIDTH // 2 - flag_text.get_width() // 2, 40))
 
         pygame.display.flip()
 
