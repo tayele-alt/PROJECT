@@ -92,6 +92,11 @@ class Player(pygame.sprite.Sprite):
                     self.rect.left = plat.rect.right
         self.is_jumping = not on_ground
 
+        if self.has_flag:
+            self.image.fill(YELLOW)
+        else:
+            self.image.fill(BLUE)
+
 
 #Platorms
 class Platfrom(pygame.sprite.Sprite):
