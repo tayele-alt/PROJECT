@@ -65,12 +65,16 @@ Run the game using:
 python main.py
 ```
 
-## Project Structure
+## File Structure
 
-```
-main.py       - Main game file
-README.md     - Project description
-```
+PROJECT/
+│
+├── README.md – Documentation for the game  
+├── demo.mp4 – Gameplay demonstration video  
+├── src/ – Development version of the game  
+│   └── main.py – Development code  
+└── dist/ – Final production version of the game  
+    └── main.py – Stable version used for grading
 
 ## Technologies Used
 
