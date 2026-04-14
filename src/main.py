@@ -174,7 +174,8 @@ class Gun(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=(x, y))
         self.direction = direction
         self.shoot_interval = 2.5
-        self.timer = 0
+        import random
+        self.timer = random.uniform(0, 2.5)
 
     def update(self, delta, game_platforms=None):
         self.timer += delta
