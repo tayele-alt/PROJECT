@@ -67,7 +67,7 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_SPACE] and not self.is_jumping:
             self.velocity_y = self.jump_power
             self.is_jumping = True
-            
+
         #Gravityy
             self.velocity_y += self.gravity * delta
             self.rect.y += self.velocity_y * delta
@@ -79,7 +79,7 @@ class Player(pygame.sprite.Sprite):
                 if self.velocity_y >= 0 and self.rect.bottom <= plat.rect.bottom:
                     self.rect.bottom = plat.rect.top
                     self.velocity_y = 0
-                    self.is_jumping = False
+                    on_ground = True
                 elif self.velocity_y < 0 and self.rect.top >=plat.rect.top:
                     self.rect.top = plat.rect.bottom
                     self.velocity_y = 0
