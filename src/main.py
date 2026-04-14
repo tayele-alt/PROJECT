@@ -453,7 +453,7 @@ class Game:
         while self.running:
             self._handle_events()
             self.clock.tick(MAX_FPS)
-            delta = self.clock.get_time() / 1000.0
+            delta = self.clock.get_time() / 2000.0
             self._update(delta)
             self._draw()
         self._game_over_screen()
