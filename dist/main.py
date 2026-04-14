@@ -429,7 +429,7 @@ class Game:
             self.flag.kill()
 
         #Return flag to base
-        if self.player.has_flag and self.player.rect.left <=60:
+        if self.player.has_flag and self.player.rect.left <=90 and self.player.rect.bottom >= 350:
             self.player.has_flag = False
             self.score +=1
             self.enemy.base_speed = 120 + (self.score * 15)
