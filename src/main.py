@@ -53,9 +53,9 @@ class Player(pygame.sprite.Sprite):
         on_ground = False
     
         # Movement
-        if keys[pygame.K_LEFT]:
+        if keys[pygame.K_LEFT] or keys[pygame.K_a]:
             self.rect.x -= self.speed * delta
-        if keys[pygame.K_RIGHT]:
+        if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
             self.rect.x += self.speed * delta
 
         #Wall
