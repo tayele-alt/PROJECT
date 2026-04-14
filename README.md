@@ -62,7 +62,3 @@ README.md     - Project description
 
 * Python
 * Pygame
-
-## Notes
-
-
