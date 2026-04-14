@@ -349,7 +349,7 @@ class Game:
         self.screen.blit(timer_text, (SCREEN_WIDTH - 120, 10))
 
         lives_text = self.font.render (f"Lives: {self.lives}", True, RED)
-        self.sreen.blit(lives_text, (SCREEN_WIDTH // 2 - lives_text.get_width() // 2, 10))
+        self.screen.blit(lives_text, (SCREEN_WIDTH // 2 - lives_text.get_width() // 2, 10))
 
         if self.player.has_flag:
             flag_text = self.font.render("Flag captured! Return to your base!", True, YELLOW)
