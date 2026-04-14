@@ -231,7 +231,7 @@ class Game:
             g = Gun(x, y, direction)
             self.gun.add(g)
             self.all_sprites.add(g)
-            
+
         self.all_sprites.add(self.enemy)
         self.score = 0
         self.time_left = GAME_DURATION
@@ -277,6 +277,20 @@ class Game:
 
         self.player.update(delta, self.platforms)
         self.enemy.update(delta, self.player, self.platforms)
+
+        #Shooting Gun
+        for gun in self.guns:
+            gun.timer += 0
+            if gun.timer >= gun.shoot_interval:
+                gun.timer = 0
+                bx = gun.rect.right if gun.direction == 1 else gun.rect.left
+                b = Bullet(bx, gun.rect.centery, gun.direction)
+                self.bullets.add(b)
+                self.all_sprites.add(b)
+
+        self.bullets.update(self.clock.get_time() / 1000.0)
+
+        #Bullet 
 
         #Pickup the Flag
         if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
