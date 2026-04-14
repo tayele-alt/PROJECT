@@ -83,9 +83,9 @@ class Player(pygame.sprite.Sprite):
                 elif self.velocity_y < 0 and self.rect.top >=plat.rect.top:
                     self.rect.top = plat.rect.bottom
                     self.velocity_y = 0
-                if self.rect.right > plat.rect.left and self.rect.left < plat.rect.left and abs(self.rect.right - plat.rect.left) < 10:
+                elif self.rect.right > plat.rect.left and self.rect.left < plat.rect.left and abs(self.rect.right - plat.rect.left) < 10:
                     self.rect.left = plat.rect.right
-                if self.rect.left < plat.rect.right and self.rect.right > plat.rect.right and abs(self.rect.left - plat.rect.right) <10:
+                elif self.rect.left < plat.rect.right and self.rect.right > plat.rect.right and abs(self.rect.left - plat.rect.right) <10:
                     self.rect.left = plat.rect.right
                     self.is_jumping = not on_ground
 
