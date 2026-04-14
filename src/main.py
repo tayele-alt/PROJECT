@@ -238,6 +238,15 @@ class Game:
         self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
 
+    def _player_hit(self):
+        self.lives -= 1
+        self.player.reset()
+        self.enemy.rect.bottomleft = (600, 480)
+        self.enemy.velocity_y = 0
+        if self.lives <= 0:
+            self.running = False
+
+
     def _game_over_screen(self):
         self.screen.fill(BLACK)
         title = self.font.render("GAME OVER", True, RED)
