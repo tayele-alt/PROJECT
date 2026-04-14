@@ -128,6 +128,8 @@ class Enemy(pygame.sprite.Sprite):
         self.boosting = False
         self.boost_timer = 0
 
+    
+
     def update(self, delta, player, game_platforms):
         #To chase player horizontally
         if player.rect.centerx < self.rect.centerx:
