@@ -220,6 +220,15 @@ class Game:
 
 
         self.enemy = Enemy(600, 480)
+        self.guns = pygame.sprite.Group()
+        self.bullets = pygame.sprite.Group()
+        for (x, y, direction) in [
+            (10, 150, 1),
+            (790, 280, -1),
+            (10, 380, 1),
+            (790, 420, -1),
+        ]:
+            g = Gun(x, y, direction)
         self.all_sprites.add(self.enemy)
         self.score = 0
         self.time_left = GAME_DURATION
