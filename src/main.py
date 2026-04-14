@@ -161,7 +161,13 @@ class Gun(pygame.sprite.Sprite):
         self.image = pygame.Surface((18,18))
         self.image.fill(RED)
         pygame.draw.rect(self.image, ORANGE, ( 0, 6, 18, 6))
-        self.rect = self.image.get_
+        self.rect = self.image.get_rect(topleft=(x, y))
+        self.direction = direction
+        self.shoot_interval = 2.5
+        self.timer = 0
+
+    def update(self, delta, game_platforms=None):
+        self.timer += delta
 
 
 #Flag
