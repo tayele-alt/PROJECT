@@ -74,7 +74,6 @@ class Player(pygame.sprite.Sprite):
             self.rect.y += self.velocity_y * delta
 
         #Platform collision
-        self.is_jumping = True
         for plat in game_platforms:
             if self.rect.colliderect(plat.rect):
                 if self.velocity_y >= 0 and self.rect.bottom <= plat.rect.bottom:
