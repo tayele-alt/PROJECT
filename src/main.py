@@ -89,7 +89,7 @@ class Player(pygame.sprite.Sprite):
                 if self.rect.centerx < plat.rect.centerx:
                     self.rect.right = plat.rect.left
                 else:
-                    self
+                    self.rect
 
 
 #Platorms
