@@ -296,7 +296,7 @@ class Game:
         self.score = 0
         if not hasattr(self, 'high_score'):
             self.high_score = 0
-        self.lives = 3
+        self.lives = 6
         self.time_left = GAME_DURATION
         self.font = pygame.font.SysFont(None, 36)
 
