@@ -120,6 +120,8 @@ class Enemy(pygame.sprite.Sprite):
 
         #Gravity
         self.velocity_y += self.gravity * delta
+        if self.velocity_y > 600:
+            self.velocity_y = 600
         self.rect.y += self.velocity_y * delta
 
         #Platform collision
