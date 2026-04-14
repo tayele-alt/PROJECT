@@ -299,6 +299,8 @@ class Game:
                     self.flag = Flag(720, 130)
                     self.all_sprites.add(self.flag)
                 self.player.reset()
+                self.enemy.rect.bottomleft = (600, 480)
+                self.enemy.velocity_y = 0
 
         #Pickup the Flag
         if not self.flag.collected and self.player.rect.colliderect(self.flag.rect):
