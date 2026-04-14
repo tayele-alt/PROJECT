@@ -316,11 +316,20 @@ class Game:
     def _start_screen(self):
         selected_level = 0
         levels = [
-            "Level 1 - Enemy Chases You"
-            "Level 2 - Enemy Speed Increases"
-            "Level 3 - Enemy jumps platforms"
-            "Level 4 - Enemy starts shoots"
+            "Level 1 - Enemy Chases You",
+            "Level 2 - Enemy Speed Increases",
+            "Level 3 - Enemy jumps platforms",
+            "Level 4 - Enemy starts shoots",
         ]
+
+        while True:
+            self.screen.fill(BLACK)
+
+            title = self.font.render("CAPTURE THE FLAG", True, CYAN)
+            self.screen.blit(title, (SCREEN_WIDTH // 2 - title.get_width() // 2, 60))
+
+            subtitle = self.font.render("Select starting level", True, CYAN)
+            self.screen.blit(subtitle)
 
     def _game_over_screen(self):
         self.screen.fill(BLACK)
