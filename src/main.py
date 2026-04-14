@@ -229,6 +229,9 @@ class Game:
             (790, 420, -1),
         ]:
             g = Gun(x, y, direction)
+            self.gun.add(g)
+            self.all_sprites.add(g)
+            
         self.all_sprites.add(self.enemy)
         self.score = 0
         self.time_left = GAME_DURATION
