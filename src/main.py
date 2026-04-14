@@ -110,6 +110,7 @@ class Enemy(pygame.sprite.Sprite):
         self.image.fill(RED)
         pygame.draw.rect(self.image, ORANGE, (5, 5, 30, 20))
         self.rect = self.image.get_rect(bottomleft=(x,y))
+        self.base_speed = 120
         self.speed = 120
         self.gravity = PLAYER_GRAVITY
         self.velocity_y = 0
