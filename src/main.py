@@ -50,6 +50,7 @@ class Player(pygame.sprite.Sprite):
 
     def update(self, delta, game_platforms=None):
         keys = pygame.key.get_pressed()
+        on_ground = False
     
         # Movement
         if keys[pygame.K_LEFT]:
