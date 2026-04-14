@@ -265,10 +265,12 @@ class Game:
         self.screen.fill(BLACK)
         title = self.font.render("GAME OVER", True, RED)
         score_text = self.font.render(f"Final Score: {self.score}", True, WHITE)
+        high_text = self.font.render(f"High Score: {self.high_score}", True, YELLOW)
         restart_text = self.font.render("Press R to Restart or Q to Quit", True, GRAY)
 
         self.screen.blit(title, (SCREEN_WIDTH // 2 - title.get_width() // 2, 160))
         self.screen.blit(score_text, (SCREEN_WIDTH // 2 - score_text.get_width() // 2, 230))
+        self.screen.blit(high_text, (SCREEN_WIDTH // 2 - high_text.get_width() // 2, 260))
         self.screen.blit(restart_text, (SCREEN_WIDTH // 2 - restart_text.get_width() // 2, 300))
         pygame.display.flip()
 
